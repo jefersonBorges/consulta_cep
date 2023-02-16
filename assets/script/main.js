@@ -4,16 +4,20 @@ const Formulario_endereco = {
     this.cacheSelectors()
     this.bindEvents()
   },
+
   bindEvents: function(){
     this.$cep.onkeydown = this.Events.cep_keydown.bind(this)
     this.$formEndereco.onsubmit = this.Events.address_submit.bind(this)
   },
+
   resetForm: function(timeout){
     setTimeout(()=>{this.$formEndereco.reset()}, timeout)
   },
+
   submitForm: function(timeout){
     setTimeout(()=>{this.$formEndereco.submit()}, timeout)
   },
+
   displayToast: function(toast, type, message, timeout){
     toast.innerHTML = message
     toast.classList.toggle(type)
@@ -84,6 +88,7 @@ const Formulario_endereco = {
       }
     },
   },
+
   Messages:{
     cep_invalid: 'Cep Inválido!',
     cep_notFound: 'Cep não encontrado!',
@@ -91,9 +96,11 @@ const Formulario_endereco = {
     address_sent: 'Endereço enviado!',
 
   },
+
   Timer:{
     msg: 2000
   },
+
   Classes:{
     toast:{
       success: 'success',
@@ -102,6 +109,7 @@ const Formulario_endereco = {
       hidden: 'hidden',
     }
   }
+  
 }
 
 Formulario_endereco.init()
