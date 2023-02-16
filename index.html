@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta Cep</title>
+  <link rel="stylesheet" href="assets/style/main.css">
+</head>
+<body>
+  <form action="" id="formEndereco" name="formEndereco" class="formEndereco">
+    <legend>Informe o CEP</legend>
+    <span>O endereço será completado automaticamente com base no CEP</span>
+    <div class="formSection">
+      <label for="cep">Cep:</label>
+      <input class="enabled" type="text" name="cep" id="cep" pattern="[0-9]{8}" title="Cep com 8 dígitos" placeholder="12345678">
+      <span class="toast hidden" id="cepToast">Toast</span>
+    </div>
+    <div class="formSection">
+      <label for="rua">Rua:</label>
+      <input type="text" name="rua" id="rua" title="Rua">
+    </div>
+    <div class="formSection">
+      <label for="bairro">Bairro:</label>
+      <input type="text" name="bairro" id="bairro" title="Bairo">
+    </div>
+    <div class="formSection">
+      <label for="cidade">Cidade:</label>
+      <input type="text" name="cidade" id="cidade" title="Cidade">
+    </div>
+    <div class="formSection">
+      <label for="estado">Estado:</label>
+      <input type="text" name="estado" id="estado" title="Estado">
+    </div>
+    <div class="formSection">
+      <label for="ibge">IBGE:</label>
+      <input type="text" name="ibge" id="ibge" title="IBGE">
+    </div>
+    <div class="formSection">
+      <button type="submit" id="submitButton" class="submitButton" title="Enviar endereço">Enviar</button>
+      <span class="toast hidden" id="submitToast">Toast</span>
+    </div>
+  </form>
+  <script src="assets/script/main.js"></script>
+</body>
+</html>
